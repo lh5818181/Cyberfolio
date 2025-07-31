@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { type Variants } from 'framer-motion';
 import { Github, Linkedin, Instagram, Mail, ChevronUp } from 'lucide-react';
 import {
   FooterWrapper,
@@ -151,7 +151,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
   /**
    * Variantes de animação para o container principal
    */
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -165,7 +165,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
   /**
    * Variantes de animação para itens individuais
    */
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -177,7 +177,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
   /**
    * Variantes de animação para links sociais
    */
-  const socialVariants = {
+  const socialVariants: Variants = {
     hidden: { opacity: 0, scale: 0 },
     visible: (index: number) => ({
       opacity: 1,
@@ -195,7 +195,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
   /**
    * Variantes de animação para o botão "voltar ao topo"
    */
-  const backToTopVariants = {
+  const backToTopVariants: Variants = {
     hidden: { opacity: 0, scale: 0 },
     visible: {
       opacity: 1,

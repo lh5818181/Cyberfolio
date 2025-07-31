@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { type Variants } from 'framer-motion';
 import {
   Mail,
   Phone,
@@ -245,7 +245,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
   /**
    * Variantes de animação para o container principal
    */
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -259,7 +259,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
   /**
    * Variantes de animação para itens individuais
    */
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -271,7 +271,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
   /**
    * Variantes de animação para itens de contato
    */
-  const contactItemVariants = {
+  const contactItemVariants: Variants = {
     hidden: { opacity: 0, x: -30 },
     visible: (index: number) => ({
       opacity: 1,
@@ -287,7 +287,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
   /**
    * Variantes de animação para links sociais
    */
-  const socialVariants = {
+  const socialVariants: Variants = {
     hidden: { opacity: 0, scale: 0 },
     visible: (index: number) => ({
       opacity: 1,

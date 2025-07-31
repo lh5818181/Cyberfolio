@@ -1,4 +1,5 @@
 import React from 'react';
+import { type Variants } from 'framer-motion'
 import { Code, Palette, Zap, Globe } from 'lucide-react';
 import {
   AboutContainer,
@@ -131,7 +132,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
   /**
    * Variantes de animação para o container principal
    */
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -145,7 +146,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
   /**
    * Variantes de animação para itens individuais
    */
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -157,7 +158,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
   /**
    * Variantes de animação para estatísticas
    */
-  const statVariants = {
+  const statVariants: Variants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: (index: number) => ({
       opacity: 1,
@@ -175,7 +176,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
   /**
    * Variantes de animação para tecnologias
    */
-  const techVariants = {
+  const techVariants: Variants = {
     hidden: { opacity: 0, scale: 0 },
     visible: (index: number) => ({
       opacity: 1,
@@ -193,7 +194,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
   /**
    * Variantes de animação para cards de habilidades
    */
-  const skillCardVariants = {
+  const skillCardVariants: Variants = {
     hidden: { opacity: 0, x: -30 },
     visible: (index: number) => ({
       opacity: 1,

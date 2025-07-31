@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import {
   HeaderContainer,
@@ -145,7 +145,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
   /**
    * Variantes de animação para o logo
    */
-  const logoVariants = {
+  const logoVariants: Variants = {
     initial: { opacity: 0, x: -20 },
     animate: {
       opacity: 1,
@@ -161,7 +161,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
   /**
    * Variantes de animação para itens de navegação
    */
-  const navItemVariants = {
+  const navItemVariants: Variants = {
     initial: { opacity: 0, y: -10 },
     animate: (index: number) => ({
       opacity: 1,
@@ -181,7 +181,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
   /**
    * Variantes de animação para o menu mobile
    */
-  const mobileMenuVariants = {
+  const mobileMenuVariants: Variants = {
     initial: { x: '100%' },
     animate: {
       x: 0,
@@ -196,7 +196,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
   /**
    * Variantes de animação para overlay do menu mobile
    */
-  const overlayVariants = {
+  const overlayVariants: Variants = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
     exit: { opacity: 0 },
