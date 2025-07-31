@@ -222,8 +222,8 @@ export const TechName = styled.div`
  * - Espaçamento entre cards
  */
 export const SkillCards = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
 `;
 

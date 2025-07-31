@@ -145,12 +145,12 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
           </MainTitle>
 
           {/* Subtítulo */}
-          <Subtitle variants={itemVariants}>Desenvolvedor Full-Stack</Subtitle>
+          <Subtitle variants={itemVariants}>Desenvolvedor Front-End & Futuro Full-Stack Java</Subtitle>
 
           {/* Descrição */}
           <Description variants={itemVariants}>
-            Criando experiências digitais inovadoras com tecnologias modernas.
-            Especializado em React, TypeScript e desenvolvimento web responsivo.
+          Construindo experiências digitais de alta performance com React, Next.js e TypeScript. 
+          Atualmente expandindo minhas habilidades para o back-end com Java e Spring Boot no curso de formação da EBAC.
           </Description>
 
           {/* Botões de ação */}

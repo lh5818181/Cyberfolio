@@ -46,7 +46,7 @@ export const StatusBadge = styled(motion.div)`
   border-radius: 25px;
   font-size: 0.875rem;
   font-weight: 500;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   backdrop-filter: blur(10px);
 `;
 
@@ -101,10 +101,10 @@ export const MainTitle = styled(motion.h1)`
  * - Espaçamento inferior
  */
 export const Subtitle = styled(motion.h2)`
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--cosmic-light-gray);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-shadow: 0 0 10px rgba(224, 224, 224, 0.2);
 `;
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Code, Palette, Zap, Globe } from 'lucide-react';
 import {
   AboutContainer,
@@ -72,9 +71,9 @@ const About: React.FC<AboutProps> = ({ className }) => {
    * Estatísticas do desenvolvedor
    */
   const stats: Stat[] = [
-    { number: '3+', label: 'Anos de Experiência' },
-    { number: '50+', label: 'Projetos Concluídos' },
-    { number: '20+', label: 'Clientes Satisfeitos' },
+    { number: '1000+', label: 'Horas de Código' },
+    { number: '10+', label: 'Projetos de Estudo' },
+    { number: '2', label: 'Stacks de Tecnologia' },
     { number: '100%', label: 'Dedicação' },
   ];
 
@@ -85,15 +84,18 @@ const About: React.FC<AboutProps> = ({ className }) => {
     { name: 'React', icon: '⚛️' },
     { name: 'TypeScript', icon: '🔷' },
     { name: 'JavaScript', icon: '💛' },
-    { name: 'Node.js', icon: '🟢' },
-    { name: 'Python', icon: '🐍' },
+    { name: 'Next.js', icon: '❌' },
     { name: 'HTML5', icon: '🧡' },
     { name: 'CSS3', icon: '💙' },
     { name: 'Git', icon: '📚' },
-    { name: 'Docker', icon: '🐳' },
-    { name: 'AWS', icon: '☁️' },
-    { name: 'MongoDB', icon: '🍃' },
-    { name: 'PostgreSQL', icon: '🐘' },
+    { name: 'Github', icon: '❌' },
+    { name: 'SASS', icon: '❌' },
+    { name: 'Tailwind CSS', icon: '❌' },
+    { name: 'Styled-components', icon: '❌' },
+    { name: 'React Testing Library', icon: '❌' },
+    { name: 'Testes E2E com Cypress', icon: '❌' },
+    { name: 'Vercel', icon: '❌' },
+    { name: 'Figma', icon: '❌' },
   ];
 
   /**
@@ -102,27 +104,27 @@ const About: React.FC<AboutProps> = ({ className }) => {
   const skills: Skill[] = [
     {
       icon: Code,
-      title: 'Desenvolvimento Full-Stack',
+      title: 'Desenvolvimento Front-End',
       description:
-        'Criação de aplicações completas, desde o frontend até o backend, com foco em performance e escalabilidade.',
+        'Criação de aplicações web interativas e de alta performance, desde a estruturação com HTML/CSS até a componentização com React e Next.js.',
     },
     {
       icon: Palette,
       title: 'UI/UX Design',
       description:
-        'Design de interfaces modernas e intuitivas, priorizando a experiência do usuário e acessibilidade.',
+        'Foco em interfaces modernas e intuitivas, aplicando princípios de design responsivo e acessibilidade para garantir a melhor experiência do usuário.',
     },
     {
       icon: Zap,
       title: 'Otimização de Performance',
       description:
-        'Implementação de técnicas avançadas para garantir aplicações rápidas e eficientes.',
+        'Implementação de técnicas como renderização otimizada e boas práticas de codificação para garantir aplicações rápidas e eficientes.',
     },
     {
       icon: Globe,
-      title: 'Desenvolvimento Web Moderno',
+      title: 'Qualidade de Código e Testes',
       description:
-        'Utilização das mais recentes tecnologias e frameworks para criar soluções web inovadoras.',
+        'Utilização de testes unitários e de integração para garantir a robustez do software, mantendo um código limpo, legível e de fácil manutenção.',
     },
   ];
 
@@ -217,16 +219,16 @@ const About: React.FC<AboutProps> = ({ className }) => {
           <SectionTitle variants={itemVariants}>Sobre Mim</SectionTitle>
 
           <Description variants={itemVariants}>
-            Sou um desenvolvedor apaixonado por tecnologia e inovação, com foco
-            em criar soluções digitais que fazem a diferença. Com mais de 3 anos
-            de experiência, especializo-me em desenvolvimento full-stack usando
-            tecnologias modernas.
+            Sou um desenvolvedor apaixonado por tecnologia, focado em criar soluções digitais que realmente fazem a diferença.
+            Minha jornada na programação começou com a curiosidade de entender como as coisas funcionam, 
+            e hoje meu objetivo é transformar essa curiosidade em aplicações eficientes e intuitivas.
           </Description>
 
           <Description variants={itemVariants}>
-            Minha jornada começou com curiosidade sobre como as coisas funcionam
-            na web, e hoje transformo ideias em realidade através de código
-            limpo, design intuitivo e experiências de usuário excepcionais.
+          Através do meu curso de formação Full-Stack na EBAC, estou construindo uma base sólida para 
+          desenvolver aplicações completas.
+          Acredito que um bom software é resultado de um código limpo, um design focado no usuário e uma busca contínua por
+          aprendizado e otimização.
           </Description>
 
           {/* Estatísticas */}
