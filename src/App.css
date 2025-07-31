@@ -1,0 +1,371 @@
+/* Importação da fonte Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variáveis CSS para o tema cósmico suave */
+:root {
+  /* Cores primárias */
+  --cosmic-deep-blue: #0a0a2a;
+  --cosmic-dark-purple: #1a0a3a;
+  --cosmic-vibrant-purple: #6a0a8a;
+  --cosmic-dark-lilac: #4a0a6a;
+
+  /* Cores neon */
+  --cosmic-cyan-neon: #00ffff;
+  --cosmic-magenta-neon: #ff00ff;
+  --cosmic-gold: #ffd700;
+
+  /* Cores de texto */
+  --cosmic-light-gray: #e0e0e0;
+  --cosmic-medium-gray: #a0a0a0;
+  --cosmic-dark-gray: #404040;
+
+  /* Gradientes */
+  --cosmic-gradient-primary: linear-gradient(
+    135deg,
+    #0a0a2a 0%,
+    #1a0a3a 50%,
+    #6a0a8a 100%
+  );
+  --cosmic-gradient-secondary: linear-gradient(45deg, #00ffff 0%, #ff00ff 100%);
+  --cosmic-gradient-accent: radial-gradient(
+    circle,
+    rgba(0, 255, 255, 0.1) 0%,
+    rgba(255, 0, 255, 0.1) 100%
+  );
+
+  /* Sombras */
+  --cosmic-shadow-neon: 0 0 20px rgba(0, 255, 255, 0.3);
+  --cosmic-shadow-magenta: 0 0 20px rgba(255, 0, 255, 0.3);
+  --cosmic-shadow-gold: 0 0 15px rgba(255, 215, 0, 0.4);
+
+  /* Transições */
+  --cosmic-transition-fast: 0.2s ease;
+  --cosmic-transition-medium: 0.3s ease;
+  --cosmic-transition-slow: 0.5s ease;
+}
+
+/* Configuração global do body */
+body {
+  font-family:
+    'Montserrat',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--cosmic-gradient-primary);
+  color: var(--cosmic-light-gray);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Configuração do HTML */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Container principal da aplicação */
+.App {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Efeito de fundo com partículas cintilantes */
+.App::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, var(--cosmic-cyan-neon), transparent),
+    radial-gradient(
+      2px 2px at 40px 70px,
+      var(--cosmic-magenta-neon),
+      transparent
+    ),
+    radial-gradient(1px 1px at 90px 40px, var(--cosmic-gold), transparent),
+    radial-gradient(
+      1px 1px at 130px 80px,
+      var(--cosmic-cyan-neon),
+      transparent
+    ),
+    radial-gradient(
+      2px 2px at 160px 30px,
+      var(--cosmic-magenta-neon),
+      transparent
+    );
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: sparkle 20s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+/* Animação das partículas */
+@keyframes sparkle {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
+
+/* Estilos para scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cosmic-dark-purple);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cosmic-cyan-neon);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cosmic-magenta-neon);
+}
+
+/* Estilos para seleção de texto */
+::selection {
+  background: rgba(0, 255, 255, 0.3);
+  color: var(--cosmic-light-gray);
+}
+
+::-moz-selection {
+  background: rgba(0, 255, 255, 0.3);
+  color: var(--cosmic-light-gray);
+}
+
+/* Utilitários para texto */
+.text-gradient {
+  background: var(--cosmic-gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-neon {
+  color: var(--cosmic-cyan-neon);
+  text-shadow: var(--cosmic-shadow-neon);
+}
+
+.text-magenta {
+  color: var(--cosmic-magenta-neon);
+  text-shadow: var(--cosmic-shadow-magenta);
+}
+
+.text-gold {
+  color: var(--cosmic-gold);
+  text-shadow: var(--cosmic-shadow-gold);
+}
+
+/* Utilitários para containers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 0;
+}
+
+/* Efeitos de glass morphism */
+.glass {
+  background: rgba(26, 10, 58, 0.6);
+  border: 1px solid var(--cosmic-dark-lilac);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+}
+
+.glass-light {
+  background: rgba(26, 10, 58, 0.3);
+  border: 1px solid rgba(74, 10, 106, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+}
+
+/* Animações personalizadas */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  }
+}
+
+/* Classes de animação */
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-fadeInLeft {
+  animation: fadeInLeft 0.6s ease-out;
+}
+
+.animate-fadeInRight {
+  animation: fadeInRight 0.6s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+.animate-glow {
+  animation: glow 2s infinite;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+
+  /* Reduz o efeito de partículas em mobile para performance */
+  .App::before {
+    opacity: 0.3;
+    animation-duration: 30s;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+}
+
+/* Estilos para elementos de foco (acessibilidade) */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--cosmic-cyan-neon);
+  outline-offset: 2px;
+}
+
+/* Estilos para elementos desabilitados */
+button:disabled,
+input:disabled,
+textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Transições globais para elementos interativos */
+button,
+a,
+input,
+textarea {
+  transition: all var(--cosmic-transition-medium);
+}
+
+/* Remove outline padrão mas mantém acessibilidade */
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Estilos para modo de alto contraste */
+@media (prefers-contrast: high) {
+  :root {
+    --cosmic-light-gray: #ffffff;
+    --cosmic-medium-gray: #cccccc;
+    --cosmic-cyan-neon: #00ffff;
+    --cosmic-magenta-neon: #ff00ff;
+  }
+}
+
+/* Estilos para preferência de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .App::before {
+    animation: none;
+  }
+}
