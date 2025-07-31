@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence, type Variants } from 'framer-motion';
+import { AnimatePresence, type Variants } from 'framer-motion';
 import { Github, ExternalLink, X, Code } from 'lucide-react';
 import {
   ProjectsContainer,
