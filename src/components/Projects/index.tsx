@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import { Github, ExternalLink, X, Code } from 'lucide-react';
 import {
   ProjectsContainer,
@@ -223,7 +223,7 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
   /**
    * Variantes de animação para o container principal
    */
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -237,7 +237,7 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
   /**
    * Variantes de animação para itens individuais
    */
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -249,7 +249,7 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
   /**
    * Variantes de animação para cards de projeto
    */
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: (index: number) => ({
       opacity: 1,
@@ -267,7 +267,7 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
   /**
    * Variantes de animação para o modal
    */
-  const modalVariants = {
+  const modalVariants: Variants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {
       opacity: 1,
@@ -284,7 +284,7 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
   /**
    * Variantes de animação para overlay do modal
    */
-  const overlayVariants = {
+  const overlayVariants: Variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
     exit: { opacity: 0 },

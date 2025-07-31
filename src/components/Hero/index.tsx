@@ -1,5 +1,8 @@
+// index.tsx (Corrigido)
+
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+// 1. Importar 'Variants' para tipagem correta
+import { motion, type Variants } from 'framer-motion';
 import {
   Mail,
   Download,
@@ -74,8 +77,9 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
 
   /**
    * Variantes de animação para o container principal
+   * 2. Adicionar a tipagem 'Variants'
    */
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -88,8 +92,9 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
 
   /**
    * Variantes de animação para itens individuais
+   * 2. Adicionar a tipagem 'Variants'
    */
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -100,8 +105,9 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
 
   /**
    * Variantes de animação para o título principal
+   * 2. Adicionar a tipagem 'Variants'
    */
-  const titleVariants = {
+  const titleVariants: Variants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {
       opacity: 1,
