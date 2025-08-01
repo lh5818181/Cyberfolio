@@ -1,5 +1,5 @@
 import React from 'react';
-import { type Variants } from 'framer-motion'
+import { type Variants } from 'framer-motion';
 import { Code, Palette, Zap, Globe } from 'lucide-react';
 import {
   AboutContainer,
@@ -220,16 +220,19 @@ const About: React.FC<AboutProps> = ({ className }) => {
           <SectionTitle variants={itemVariants}>Sobre Mim</SectionTitle>
 
           <Description variants={itemVariants}>
-            Sou um desenvolvedor apaixonado por tecnologia, focado em criar soluções digitais que realmente fazem a diferença.
-            Minha jornada na programação começou com a curiosidade de entender como as coisas funcionam, 
-            e hoje meu objetivo é transformar essa curiosidade em aplicações eficientes e intuitivas.
+            Sou um desenvolvedor apaixonado por tecnologia, focado em criar
+            soluções digitais que realmente fazem a diferença. Minha jornada na
+            programação começou com a curiosidade de entender como as coisas
+            funcionam, e hoje meu objetivo é transformar essa curiosidade em
+            aplicações eficientes e intuitivas.
           </Description>
 
           <Description variants={itemVariants}>
-          Através do meu curso de formação Full-Stack na EBAC, estou construindo uma base sólida para 
-          desenvolver aplicações completas.
-          Acredito que um bom software é resultado de um código limpo, um design focado no usuário e uma busca contínua por
-          aprendizado e otimização.
+            Através do meu curso de formação Full-Stack na EBAC, estou
+            construindo uma base sólida para desenvolver aplicações completas.
+            Acredito que um bom software é resultado de um código limpo, um
+            design focado no usuário e uma busca contínua por aprendizado e
+            otimização.
           </Description>
 
           {/* Estatísticas */}

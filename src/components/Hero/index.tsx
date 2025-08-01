@@ -3,11 +3,7 @@
 import React, { useState, useEffect } from 'react';
 // 1. Importar 'Variants' para tipagem correta
 import { motion, type Variants } from 'framer-motion';
-import {
-  Mail,
-  Download,
-  ChevronDown,
-} from 'lucide-react';
+import { Mail, Download, ChevronDown } from 'lucide-react';
 import {
   HeroContainer,
   HeroContent,
@@ -24,7 +20,6 @@ import {
   ScrollIcon,
   BackgroundCircle,
 } from './styles';
-
 
 /**
  * Props do componente Hero
@@ -116,7 +111,6 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
     },
   };
 
-
   return (
     <HeroContainer id="home" className={className}>
       {/* Elementos decorativos de fundo */}
@@ -151,12 +145,15 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
           </MainTitle>
 
           {/* Subtítulo */}
-          <Subtitle variants={itemVariants}>Desenvolvedor Front-End & Futuro Full-Stack Java</Subtitle>
+          <Subtitle variants={itemVariants}>
+            Desenvolvedor Front-End & Futuro Full-Stack Java
+          </Subtitle>
 
           {/* Descrição */}
           <Description variants={itemVariants}>
-          Construindo experiências digitais de alta performance com React, Next.js e TypeScript. 
-          Atualmente expandindo minhas habilidades para o back-end com Java e Spring Boot no curso de formação da EBAC.
+            Construindo experiências digitais de alta performance com React,
+            Next.js e TypeScript. Atualmente expandindo minhas habilidades para
+            o back-end com Java e Spring Boot no curso de formação da EBAC.
           </Description>
 
           {/* Botões de ação */}

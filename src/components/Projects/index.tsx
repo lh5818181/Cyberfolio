@@ -82,28 +82,42 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
   const projects: Project[] = [
     {
       id: '1',
-      title: 'E-commerce Platform',
+      title: 'Áurea Financeira - Landing Page - Falta link do vercel',
       description:
-        'Plataforma completa de e-commerce com carrinho, pagamentos e painel administrativo.',
+        'Landing page institucional responsiva e de alta performance, focada em fortalecer a presença digital e captar leads para o cliente.',
       fullDescription:
-        'Uma plataforma completa de e-commerce desenvolvida com React e Node.js, incluindo sistema de carrinho de compras, integração com gateway de pagamento, painel administrativo para gerenciamento de produtos e pedidos, e sistema de autenticação seguro.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      category: 'fullstack',
-      githubUrl: 'https://github.com',
+        'Desenvolvimento de uma landing page completa para a Áurea Financeira, utilizando as melhores práticas de front-end para criar uma experiência de usuário fluida e profissional. O projeto foi construído com React e TypeScript para garantir robustez e manutenibilidade. O design responsivo se adapta perfeitamente a qualquer dispositivo, enquanto as otimizações de performance asseguram um carregamento rápido. Animações sutis foram implementadas para aumentar o engajamento e guiar o usuário pelas seções de forma intuitiva.',
+      technologies: [
+        'React',
+        'TypeScript',
+        'Styled Components',
+        'Framer Motion',
+      ],
+      category: 'react',
+      githubUrl:
+        'https://github.com/devhenriquejs/LandingPage_AureaFinanceira.git',
       liveUrl: 'https://demo.com',
       imageColor: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     },
     {
       id: '2',
-      title: 'Task Management App',
+      title: 'Gerenciador de Contatos Moderno',
       description:
-        'Aplicativo de gerenciamento de tarefas com drag & drop e colaboração em tempo real.',
+        'Aplicação completa para gerenciamento de contatos com adição, edição, busca e persistência de dados no navegador.',
       fullDescription:
-        'Aplicativo moderno de gerenciamento de tarefas inspirado no Trello, com funcionalidades de drag & drop, colaboração em tempo real, notificações push, e sincronização entre dispositivos. Desenvolvido com React e Socket.io.',
-      technologies: ['React', 'TypeScript', 'Socket.io', 'PostgreSQL'],
+        'Este projeto é uma demonstração de ponta a ponta de habilidades em front-end, construído com React 19 e TypeScript. A aplicação utiliza Redux Toolkit para um gerenciamento de estado global robusto e React Hook Form com Zod para validação de formulários eficiente e segura. A interface é enriquecida com animações fluidas e componentes acessíveis de Radix UI, proporcionando uma experiência de usuário (UX) superior. Os dados são salvos localmente, garantindo persistência, e o projeto inclui uma suíte de testes unitários com Jest para assegurar a qualidade do código.',
+      technologies: [
+        'React 19',
+        'TypeScript',
+        'Redux Toolkit',
+        'Styled Components',
+        'Framer Motion',
+        'React Hook Form',
+        'Jest',
+      ],
       category: 'react',
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://demo.com',
+      githubUrl: 'https://github.com/devhenriquejs/ContactListReact.git',
+      liveUrl: 'https://contact-list-react-ten.vercel.app/',
       imageColor: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
     },
     {
@@ -302,8 +316,9 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
         >
           <SectionTitle variants={itemVariants}>Meus Projetos</SectionTitle>
           <SectionSubtitle variants={itemVariants}>
-            Uma seleção dos meus trabalhos mais recentes, demonstrando
-            diferentes tecnologias e abordagens de desenvolvimento.
+            Uma seleção dos meus principais projetos de estudo, onde apliquei os
+            conhecimentos adquiridos em Front-End para criar aplicações
+            interativas e funcionais.
           </SectionSubtitle>
         </ProjectsHeader>
 
