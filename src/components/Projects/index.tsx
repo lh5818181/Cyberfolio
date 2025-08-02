@@ -134,15 +134,15 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
     },
     {
       id: '4',
-      title: 'Portfolio Website',
+      title: 'Cyberfolio - Portfólio Pessoal',
       description:
-        'Website de portfólio responsivo com animações suaves e design moderno.',
+        'Desenvolvimento do meu portfólio pessoal com design cósmico, animações fluidas e foco em performance e experiência do usuário',
       fullDescription:
-        'Website de portfólio pessoal com design responsivo, animações suaves usando Framer Motion, otimização para SEO, e sistema de contato integrado. Desenvolvido com foco em performance e acessibilidade.',
-      technologies: ['React', 'Styled Components', 'Framer Motion'],
+        'Este projeto é a minha vitrine profissional, desenvolvido do zero com React, TypeScript e Vite. O objetivo foi criar uma experiência imersiva e memorável, utilizando um tema cósmico com gradientes profundos e animações fluidas com Framer Motion. A arquitetura foi pensada para ser modular e escalável, com componentes estilizados via Styled Components. Grande atenção foi dada à performance, com lazy loading de componentes e otimizações de build, e à qualidade do código, com a implementação de ESLint, Prettier e checagem de tipos para garantir um desenvolvimento robusto e consistente.',
+      technologies: ['React', 'TypeScript', 'Vite', 'Styled Components', 'Framer Motion', 'UX Design'],
       category: 'design',
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://demo.com',
+      githubUrl: 'https://github.com/lh5818181/Cyberfolio',
+      liveUrl: 'https://cyberfolio-five.vercel.app/',
       imageColor: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
     },
     {
