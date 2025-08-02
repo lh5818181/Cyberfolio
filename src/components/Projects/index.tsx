@@ -25,6 +25,7 @@ import {
   ModalCloseButton,
   ModalInner,
 } from './styles';
+import { label } from 'framer-motion/client';
 
 /**
  * Interface para projeto
@@ -74,6 +75,7 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
     { id: 'fullstack', label: 'Full-Stack' },
     { id: 'mobile', label: 'Mobile' },
     { id: 'design', label: 'Design' },
+    { id: 'templates', label: 'Templates'},
   ];
 
   /**
@@ -82,21 +84,18 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
   const projects: Project[] = [
     {
       id: '1',
-      title: 'Áurea Financeira - Landing Page - Falta link do vercel',
+      title: 'Template Acelerador de Landing Pages',
       description:
-        'Landing page institucional responsiva e de alta performance, focada em fortalecer a presença digital e captar leads para o cliente.',
+        'Template configurável para criar landing pages de alta conversão com React, TypeScript e foco em performance e acessibilidade.',
       fullDescription:
-        'Desenvolvimento de uma landing page completa para a Áurea Financeira, utilizando as melhores práticas de front-end para criar uma experiência de usuário fluida e profissional. O projeto foi construído com React e TypeScript para garantir robustez e manutenibilidade. O design responsivo se adapta perfeitamente a qualquer dispositivo, enquanto as otimizações de performance asseguram um carregamento rápido. Animações sutis foram implementadas para aumentar o engajamento e guiar o usuário pelas seções de forma intuitiva.',
+        'Este é um template de landing page de código aberto, projetado para acelerar o desenvolvimento. Construído com React e TypeScript, ele é totalmente personalizável através de arquivos de configuração de tema e conteúdo. O template já vem com seções pré-construídas, design responsivo, otimizações de performance (lazy loading), práticas de acessibilidade (WCAG 2.1) e um formulário de contato inteligente com validação e integração para webhooks (Zapier, Make.com), permitindo que desenvolvedores lancem projetos de alta qualidade em tempo recorde.',
       technologies: [
-        'React',
-        'TypeScript',
-        'Styled Components',
-        'Framer Motion',
+        'React', 'TypeScript', 'Styled Components', 'Acessibilidade', 'Performance', 'SEO'
       ],
-      category: 'react',
+      category: 'Templates',
       githubUrl:
-        'https://github.com/devhenriquejs/LandingPage_AureaFinanceira.git',
-      liveUrl: 'https://demo.com',
+        'https://github.com/devhenriquejs/templateLP',
+      liveUrl: 'https://template-lp-two.vercel.app/',
       imageColor: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     },
     {
@@ -215,21 +214,12 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
       React: 'rgba(97, 218, 251, 0.1)',
       TypeScript: 'rgba(49, 120, 198, 0.1)',
       'Node.js': 'rgba(104, 160, 99, 0.1)',
-      MongoDB: 'rgba(76, 175, 80, 0.1)',
-      PostgreSQL: 'rgba(51, 103, 145, 0.1)',
       'Next.js': 'rgba(0, 0, 0, 0.1)',
       Express: 'rgba(68, 68, 68, 0.1)',
-      'Socket.io': 'rgba(0, 0, 0, 0.1)',
       'React Native': 'rgba(97, 218, 251, 0.1)',
-      Expo: 'rgba(0, 0, 0, 0.1)',
       'Styled Components': 'rgba(219, 112, 147, 0.1)',
       'Framer Motion': 'rgba(0, 85, 255, 0.1)',
-      'Chart.js': 'rgba(255, 99, 132, 0.1)',
-      Redis: 'rgba(220, 38, 38, 0.1)',
-      Prisma: 'rgba(45, 212, 191, 0.1)',
       Tailwind: 'rgba(6, 182, 212, 0.1)',
-      Stripe: 'rgba(99, 102, 241, 0.1)',
-      'Weather API': 'rgba(59, 130, 246, 0.1)',
     };
     return colors[tech] || 'rgba(0, 255, 255, 0.1)';
   };
