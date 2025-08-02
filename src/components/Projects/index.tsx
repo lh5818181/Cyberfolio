@@ -25,7 +25,6 @@ import {
   ModalCloseButton,
   ModalInner,
 } from './styles';
-import { label } from 'framer-motion/client';
 
 /**
  * Interface para projeto
