@@ -79,7 +79,7 @@ export const Description = styled(motion.p)`
  */
 export const StatsContainer = styled(motion.div)`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   margin-top: 2rem;
 `;
@@ -151,6 +151,7 @@ export const SkillsTitle = styled(motion.h3)`
   font-weight: 600;
   color: var(--cosmic-light-gray);
   margin-bottom: 1rem;
+  margin-top: 28px;
 `;
 
 /**
@@ -181,7 +182,7 @@ export const TechItem = styled(motion.div)`
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 1rem;
+  padding: 10px 45px;
   backdrop-filter: blur(10px);
   transition: all var(--cosmic-transition-medium);
   cursor: pointer;
@@ -194,12 +195,16 @@ export const TechItem = styled(motion.div)`
 `;
 
 /**
- * Ícone da tecnologia (emoji)
- * - Tipografia grande
+ * Ícone da tecnologia (agora para SVG)
+ * - Removemos o font-size
+ * - Usamos flexbox para centralizar o ícone SVG que vem como filho
  */
 export const TechIcon = styled.div`
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 0.25rem;
+  /* O tamanho do ícone é controlado pela prop 'size' no componente */
 `;
 
 /**

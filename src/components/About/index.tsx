@@ -1,6 +1,27 @@
 import React from 'react';
 import { type Variants } from 'framer-motion';
 import { Code, Palette, Zap, Globe } from 'lucide-react';
+// 1. Importar os ícones de tecnologia da react-icons
+import {
+  FaReact,
+  FaHtml5,
+  FaCss3Alt,
+  FaGitAlt,
+  FaGithub,
+  FaSass,
+  FaFigma,
+} from 'react-icons/fa';
+import {
+  SiTypescript,
+  SiJavascript,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiStyledcomponents,
+  SiTestinglibrary,
+  SiCypress,
+  SiVercel,
+} from 'react-icons/si';
+
 import {
   AboutContainer,
   AboutContent,
@@ -34,11 +55,11 @@ interface Stat {
 }
 
 /**
- * Interface para tecnologias
+ * Interface para tecnologias (atualizada para usar componentes de ícone)
  */
 interface Technology {
   name: string;
-  icon: string;
+  icon: React.ComponentType<{ size?: number }>;
 }
 
 /**
@@ -79,24 +100,24 @@ const About: React.FC<AboutProps> = ({ className }) => {
   ];
 
   /**
-   * Tecnologias conhecidas
+   * Tecnologias conhecidas com os novos ícones
    */
   const technologies: Technology[] = [
-    { name: 'React', icon: '⚛️' },
-    { name: 'TypeScript', icon: '🔷' },
-    { name: 'JavaScript', icon: '💛' },
-    { name: 'Next.js', icon: '❌' },
-    { name: 'HTML5', icon: '🧡' },
-    { name: 'CSS3', icon: '💙' },
-    { name: 'Git', icon: '📚' },
-    { name: 'Github', icon: '❌' },
-    { name: 'SASS', icon: '❌' },
-    { name: 'Tailwind CSS', icon: '❌' },
-    { name: 'Styled-components', icon: '❌' },
-    { name: 'React Testing Library', icon: '❌' },
-    { name: 'Testes E2E com Cypress', icon: '❌' },
-    { name: 'Vercel', icon: '❌' },
-    { name: 'Figma', icon: '❌' },
+    { name: 'React', icon: FaReact },
+    { name: 'TypeScript', icon: SiTypescript },
+    { name: 'JavaScript', icon: SiJavascript },
+    { name: 'Next.js', icon: SiNextdotjs },
+    { name: 'HTML5', icon: FaHtml5 },
+    { name: 'CSS3', icon: FaCss3Alt },
+    { name: 'Git', icon: FaGitAlt },
+    { name: 'Github', icon: FaGithub },
+    { name: 'SASS', icon: FaSass },
+    { name: 'Tailwind CSS', icon: SiTailwindcss },
+    { name: 'Styled Components', icon: SiStyledcomponents },
+    { name: 'Testing Library', icon: SiTestinglibrary },
+    { name: 'Cypress', icon: SiCypress },
+    { name: 'Vercel', icon: SiVercel },
+    { name: 'Figma', icon: FaFigma },
   ];
 
   /**
@@ -267,22 +288,27 @@ const About: React.FC<AboutProps> = ({ className }) => {
 
           {/* Grid de tecnologias */}
           <TechGrid variants={itemVariants}>
-            {technologies.map((tech, index) => (
-              <TechItem
-                key={tech.name}
-                variants={techVariants}
-                custom={index}
-                whileHover={{
-                  scale: 1.1,
-                  rotate: 5,
-                  transition: { type: 'spring', stiffness: 300, damping: 20 },
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <TechIcon>{tech.icon}</TechIcon>
-                <TechName>{tech.name}</TechName>
-              </TechItem>
-            ))}
+            {technologies.map((tech, index) => {
+              const IconComponent = tech.icon;
+              return (
+                <TechItem
+                  key={tech.name}
+                  variants={techVariants}
+                  custom={index}
+                  whileHover={{
+                    scale: 1.1,
+                    rotate: 5,
+                    transition: { type: 'spring', stiffness: 300, damping: 20 },
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <TechIcon>
+                    <IconComponent size={24} />
+                  </TechIcon>
+                  <TechName>{tech.name}</TechName>
+                </TechItem>
+              );
+            })}
           </TechGrid>
 
           <SkillsTitle variants={itemVariants}>
