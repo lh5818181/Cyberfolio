@@ -126,7 +126,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
           {/* Badge de status */}
           <StatusBadge variants={itemVariants}>
             <StatusDot />
-            Disponível para projetos
+            Portfolio em Desenvolvimento
           </StatusBadge>
 
           {/* Título principal com efeito de digitação */}
