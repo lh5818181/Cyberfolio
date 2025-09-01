@@ -71,8 +71,8 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
   const categories = [
     { id: 'todos', label: 'Todos' },
     { id: 'react', label: 'React' },
-    { id: 'fullstack', label: 'Full-Stack' },
-    { id: 'mobile', label: 'Mobile' },
+    { id: 'web', label: 'Web' },
+    // { id: 'mobile', label: 'Mobile' },
     { id: 'design', label: 'Design' },
     { id: 'templates', label: 'Templates'},
   ];
@@ -91,7 +91,7 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
       technologies: [
         'React', 'TypeScript', 'Styled Components', 'Acessibilidade', 'Performance', 'SEO'
       ],
-      category: 'Templates',
+      category: 'templates',
       githubUrl:
         'https://github.com/devhenriquejs/templateLP',
       liveUrl: 'https://template-lp-two.vercel.app/',
@@ -118,19 +118,26 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
       liveUrl: 'https://contact-list-react-ten.vercel.app/',
       imageColor: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
     },
-    {
-      id: '3',
-      title: 'Weather App Mobile',
-      description:
-        'Aplicativo mobile de previsão do tempo com geolocalização e notificações.',
-      fullDescription:
-        'Aplicativo mobile nativo para previsão do tempo, com detecção automática de localização, previsões de 7 dias, alertas meteorológicos, e interface adaptativa baseada nas condições climáticas atuais.',
-      technologies: ['React Native', 'Expo', 'Weather API'],
-      category: 'mobile',
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://demo.com',
-      imageColor: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-    },
+  {
+    id: '3',
+    title: 'Visualizador APOD',
+    description:
+      'Uma aplicação web que exibe a foto astronômica do dia da NASA, com trilha sonora sugerida pelo Spotify.',
+    fullDescription:
+      'Este projeto é um estudo de caso para aprimorar minhas habilidades em consumo de APIs, otimização de UI/UX e animações fluidas, solidificando meu conhecimento em React, TypeScript e Styled Components. Ele conecta a API da NASA para obter a foto do dia com a API do Spotify para sugerir uma trilha sonora relevante.',
+    technologies: [
+      'React',
+      'TypeScript',
+      'Styled Components',
+      'Framer Motion',
+      'NASA API',
+      'Spotify API',
+    ],
+    category: 'web',
+    githubUrl: 'https://github.com/lh5818181/Apod-visualizer-project',
+    liveUrl: 'https://apod-visualizer-project.vercel.app/',
+    imageColor: 'linear-gradient(135deg, #001f3f 0%, #1a004c 100%)',
+  },
     {
       id: '4',
       title: 'Cyberfolio - Portfólio Pessoal',
@@ -144,32 +151,32 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
       liveUrl: 'https://cyberfolio-five.vercel.app/',
       imageColor: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
     },
-    {
-      id: '5',
-      title: 'Social Media Dashboard',
-      description:
-        'Dashboard para análise de redes sociais com gráficos interativos e relatórios.',
-      fullDescription:
-        'Dashboard completo para análise de métricas de redes sociais, com gráficos interativos, relatórios automatizados, integração com APIs do Instagram, Facebook e Twitter, e sistema de agendamento de posts.',
-      technologies: ['React', 'Chart.js', 'Express', 'Redis'],
-      category: 'fullstack',
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://demo.com',
-      imageColor: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
-    },
-    {
-      id: '6',
-      title: 'Blog Platform',
-      description:
-        'Plataforma de blog com editor rich text e sistema de comentários.',
-      fullDescription:
-        'Plataforma completa de blog com editor rich text, sistema de comentários, categorização de posts, busca avançada, e painel administrativo para gerenciamento de conteúdo. Otimizada para SEO e performance.',
-      technologies: ['Next.js', 'Prisma', 'PostgreSQL', 'Tailwind'],
-      category: 'react',
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://demo.com',
-      imageColor: 'linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)',
-    },
+    // {
+    //   id: '5',
+    //   title: 'Social Media Dashboard',
+    //   description:
+    //     'Dashboard para análise de redes sociais com gráficos interativos e relatórios.',
+    //   fullDescription:
+    //     'Dashboard completo para análise de métricas de redes sociais, com gráficos interativos, relatórios automatizados, integração com APIs do Instagram, Facebook e Twitter, e sistema de agendamento de posts.',
+    //   technologies: ['React', 'Chart.js', 'Express', 'Redis'],
+    //   category: 'fullstack',
+    //   githubUrl: 'https://github.com',
+    //   liveUrl: 'https://demo.com',
+    //   imageColor: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
+    // },
+    // {
+    //   id: '6',
+    //   title: 'Blog Platform',
+    //   description:
+    //     'Plataforma de blog com editor rich text e sistema de comentários.',
+    //   fullDescription:
+    //     'Plataforma completa de blog com editor rich text, sistema de comentários, categorização de posts, busca avançada, e painel administrativo para gerenciamento de conteúdo. Otimizada para SEO e performance.',
+    //   technologies: ['Next.js', 'Prisma', 'PostgreSQL', 'Tailwind'],
+    //   category: 'react',
+    //   githubUrl: 'https://github.com',
+    //   liveUrl: 'https://demo.com',
+    //   imageColor: 'linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)',
+    // },
   ];
 
   /**
