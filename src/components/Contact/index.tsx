@@ -104,17 +104,17 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'luis.henrique@email.com',
+      value: 'lh5818181@gmai.com',
     },
     {
       icon: Phone,
       label: 'Telefone',
-      value: '+55 (11) 99999-9999',
+      value: '+55 (81) 9 9942-9143',
     },
     {
       icon: MapPin,
       label: 'Localização',
-      value: 'São Paulo, Brasil',
+      value: 'Pernambuco, Brasil',
     },
   ];
 
@@ -124,12 +124,12 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
   const socialLinks: SocialLinkData[] = [
     {
       icon: Github,
-      href: 'https://github.com',
+      href: 'https://github.com/lh5818181',
       label: 'GitHub',
     },
     {
       icon: Linkedin,
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/in/luis-henrique-fullstack/',
       label: 'LinkedIn',
     },
     {

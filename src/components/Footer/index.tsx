@@ -70,12 +70,12 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
   const socialLinks: SocialLinkData[] = [
     {
       icon: Github,
-      href: 'https://github.com',
+      href: 'https://github.com/lh5818181',
       label: 'GitHub',
     },
     {
       icon: Linkedin,
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/in/luis-henrique-fullstack/',
       label: 'LinkedIn',
     },
     {
@@ -85,7 +85,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
     },
     {
       icon: Mail,
-      href: 'mailto:luis.henrique@email.com',
+      href: 'mailto:lh5818181@gmail.com',
       label: 'Email',
     },
   ];
@@ -107,7 +107,6 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
     { label: 'Desenvolvimento Web', href: '#services' },
     { label: 'Aplicações Mobile', href: '#services' },
     { label: 'UI/UX Design', href: '#services' },
-    { label: 'Consultoria', href: '#services' },
   ];
 
   /**
