@@ -87,6 +87,7 @@ export const NavList = styled.ul`
 
   @media (max-width: 768px) {
     gap: 1rem;
+    display: none;
   }
 `;
 

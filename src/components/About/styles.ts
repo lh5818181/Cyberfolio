@@ -28,7 +28,7 @@ export const AboutContent = styled.div`
   gap: 4rem;
   align-items: start;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -79,9 +79,13 @@ export const Description = styled(motion.p)`
  */
 export const StatsContainer = styled(motion.div)`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 /**
@@ -152,6 +156,10 @@ export const SkillsTitle = styled(motion.h3)`
   color: var(--cosmic-light-gray);
   margin-bottom: 1rem;
   margin-top: 28px;
+
+  @media (max-width: 1024px) {
+    text-align: left;
+  }
 `;
 
 /**
@@ -230,6 +238,10 @@ export const SkillCards = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+
+  @media (max-width: 550px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 /**
