@@ -52,13 +52,13 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
   // Estado para seção ativa
-  const [activeSection, setActiveSection] = useState<string>('home');
+  const [activeSection, setActiveSection] = useState<string>('inicio');
 
   /**
    * Itens de navegação
    */
   const navItems: NavItem[] = [
-    { label: 'Home', href: '#home' },
+    { label: 'Inicio', href: '#inicio' },
     { label: 'Sobre', href: '#about' },
     { label: 'Projetos', href: '#projects' },
     { label: 'Contato', href: '#contact' },
@@ -83,7 +83,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
    */
   useEffect(() => {
     const handleScrollSpy = (): void => {
-      const sections = ['home', 'about', 'projects', 'contact'];
+      const sections = ['inicio', 'about', 'projects', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -219,7 +219,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
           initial="initial"
           animate="animate"
           whileHover="hover"
-          onClick={() => handleNavigation('#home')}
+          onClick={() => handleNavigation('#inicio')}
         >
           LH.dev
         </Logo>
