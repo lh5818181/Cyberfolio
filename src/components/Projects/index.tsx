@@ -74,7 +74,7 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
     { id: 'web', label: 'Web' },
     // { id: 'mobile', label: 'Mobile' },
     { id: 'design', label: 'Design' },
-    { id: 'templates', label: 'Templates'},
+    { id: 'templates', label: 'Templates' },
   ];
 
   /**
@@ -89,11 +89,15 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
       fullDescription:
         'Este é um template de landing page de código aberto, projetado para acelerar o desenvolvimento. Construído com React e TypeScript, ele é totalmente personalizável através de arquivos de configuração de tema e conteúdo. O template já vem com seções pré-construídas, design responsivo, otimizações de performance (lazy loading), práticas de acessibilidade (WCAG 2.1) e um formulário de contato inteligente com validação e integração para webhooks (Zapier, Make.com), permitindo que desenvolvedores lancem projetos de alta qualidade em tempo recorde.',
       technologies: [
-        'React', 'TypeScript', 'Styled Components', 'Acessibilidade', 'Performance', 'SEO'
+        'React',
+        'TypeScript',
+        'Styled Components',
+        'Acessibilidade',
+        'Performance',
+        'SEO',
       ],
       category: 'templates',
-      githubUrl:
-        'https://github.com/devhenriquejs/templateLP',
+      githubUrl: 'https://github.com/devhenriquejs/templateLP',
       liveUrl: 'https://template-lp-two.vercel.app/',
       imageColor: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     },
@@ -118,26 +122,26 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
       liveUrl: 'https://contact-list-react-ten.vercel.app/',
       imageColor: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
     },
-  {
-    id: '3',
-    title: 'Visualizador APOD',
-    description:
-      'Uma aplicação web que exibe a foto astronômica do dia da NASA, com trilha sonora sugerida pelo Spotify.',
-    fullDescription:
-      'Este projeto é um estudo de caso para aprimorar minhas habilidades em consumo de APIs, otimização de UI/UX e animações fluidas, solidificando meu conhecimento em React, TypeScript e Styled Components. Ele conecta a API da NASA para obter a foto do dia com a API do Spotify para sugerir uma trilha sonora relevante.',
-    technologies: [
-      'React',
-      'TypeScript',
-      'Styled Components',
-      'Framer Motion',
-      'NASA API',
-      'Spotify API',
-    ],
-    category: 'web',
-    githubUrl: 'https://github.com/lh5818181/Apod-visualizer-project',
-    liveUrl: 'https://apod-visualizer-project.vercel.app/',
-    imageColor: 'linear-gradient(135deg, #001f3f 0%, #1a004c 100%)',
-  },
+    {
+      id: '3',
+      title: 'Visualizador APOD',
+      description:
+        'Uma aplicação web que exibe a foto astronômica do dia da NASA, com trilha sonora sugerida pelo Spotify.',
+      fullDescription:
+        'Este projeto é um estudo de caso para aprimorar minhas habilidades em consumo de APIs, otimização de UI/UX e animações fluidas, solidificando meu conhecimento em React, TypeScript e Styled Components. Ele conecta a API da NASA para obter a foto do dia com a API do Spotify para sugerir uma trilha sonora relevante.',
+      technologies: [
+        'React',
+        'TypeScript',
+        'Styled Components',
+        'Framer Motion',
+        'NASA API',
+        'Spotify API',
+      ],
+      category: 'web',
+      githubUrl: 'https://github.com/lh5818181/Apod-visualizer-project',
+      liveUrl: 'https://apod-visualizer-project.vercel.app/',
+      imageColor: 'linear-gradient(135deg, #001f3f 0%, #1a004c 100%)',
+    },
     {
       id: '4',
       title: 'Cyberfolio - Portfólio Pessoal',
@@ -145,7 +149,14 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
         'Desenvolvimento do meu portfólio pessoal com design cósmico, animações fluidas e foco em performance e experiência do usuário',
       fullDescription:
         'Este projeto é a minha vitrine profissional, desenvolvido do zero com React, TypeScript e Vite. O objetivo foi criar uma experiência imersiva e memorável, utilizando um tema cósmico com gradientes profundos e animações fluidas com Framer Motion. A arquitetura foi pensada para ser modular e escalável, com componentes estilizados via Styled Components. Grande atenção foi dada à performance, com lazy loading de componentes e otimizações de build, e à qualidade do código, com a implementação de ESLint, Prettier e checagem de tipos para garantir um desenvolvimento robusto e consistente.',
-      technologies: ['React', 'TypeScript', 'Vite', 'Styled Components', 'Framer Motion', 'UX Design'],
+      technologies: [
+        'React',
+        'TypeScript',
+        'Vite',
+        'Styled Components',
+        'Framer Motion',
+        'UX Design',
+      ],
       category: 'design',
       githubUrl: 'https://github.com/lh5818181/Cyberfolio',
       liveUrl: 'https://cyberfolio-five.vercel.app/',

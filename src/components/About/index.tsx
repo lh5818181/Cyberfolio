@@ -241,19 +241,11 @@ const About: React.FC<AboutProps> = ({ className }) => {
           <SectionTitle variants={itemVariants}>Sobre Mim</SectionTitle>
 
           <Description variants={itemVariants}>
-            Sou um desenvolvedor apaixonado por tecnologia, focado em criar
-            soluções digitais que realmente fazem a diferença. Minha jornada na
-            programação começou com a curiosidade de entender como as coisas
-            funcionam, e hoje meu objetivo é transformar essa curiosidade em
-            aplicações eficientes e intuitivas.
-          </Description>
-
-          <Description variants={itemVariants}>
-            Através do meu curso de formação Full-Stack na EBAC, estou
-            construindo uma base sólida para desenvolver aplicações completas.
-            Acredito que um bom software é resultado de um código limpo, um
-            design focado no usuário e uma busca contínua por aprendizado e
-            otimização.
+            Minha paixão é transformar a curiosidade em soluções de software
+            eficientes e escaláveis. Sou um Desenvolvedor Full-Stack Junior,
+            com uma base sólida em arquiteturas e forte compromisso
+            com clean code, qualidade de código e otimização de performance em
+            toda a stack.
           </Description>
 
           {/* Estatísticas */}
