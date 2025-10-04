@@ -21,11 +21,13 @@ export const AboutContainer = styled.section`
  * - Largura máxima controlada
  */
 export const AboutContent = styled.div`
-  max-width: 1200px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    gap: 4rem;
+    align-items: start;
+    flex-direction: column;
+}
   align-items: start;
 
   @media (max-width: 1024px) {
@@ -57,6 +59,7 @@ export const SectionTitle = styled(motion.h2)`
   color: var(--cosmic-cyan-neon);
   text-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
   margin-bottom: 1rem;
+  text-align: center;
 `;
 
 /**
@@ -182,6 +185,12 @@ export const TechGrid = styled(motion.div)`
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   gap: 1rem;
   margin-bottom: 2rem;
+`;
+
+export const TechContainer = styled(motion.div)` // Container para cada categoria de tecnologias - modificar layout
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 `;
 
 /**

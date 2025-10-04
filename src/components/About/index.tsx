@@ -52,6 +52,7 @@ import {
   SkillTitle,
   SkillDescription,
   StacksTitle,
+  TechContainer,
 } from './styles';
 
 /**
@@ -260,7 +261,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <SectionTitle variants={itemVariants}>Sobre Mim</SectionTitle>
-
+        <>
           <Description variants={itemVariants}>
 Minha paixão é transformar a curiosidade em soluções de software eficientes e escaláveis. Sou um Desenvolvedor Full-Stack com foco em Front End com uma base sólida em arquiteturas e forte compromisso com clean code, qualidade de código e otimização e performance.
           </Description>
@@ -282,6 +283,7 @@ Minha paixão é transformar a curiosidade em soluções de software eficientes 
               </StatItem>
             ))}
           </StatsContainer>
+        </>
         </TextContent>
 
         {/* Habilidades e tecnologias */}
@@ -295,6 +297,7 @@ Minha paixão é transformar a curiosidade em soluções de software eficientes 
             Tecnologias & Ferramentas
           </SkillsTitle>
 
+          <TechContainer variants={itemVariants}>
           <StacksTitle variants={itemVariants}>
             Front End
           </StacksTitle>
@@ -351,6 +354,7 @@ Minha paixão é transformar a curiosidade em soluções de software eficientes 
               );
             })}
           </TechGrid>
+          </TechContainer>
 
           <SkillsTitle variants={itemVariants}>
             Principais Habilidades
