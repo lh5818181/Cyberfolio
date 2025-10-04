@@ -1,6 +1,11 @@
 import React from 'react';
 import { type Variants } from 'framer-motion';
 import { Code, Palette, Zap, Globe } from 'lucide-react';
+
+import { SiSpringboot, SiMysql, SiMongodb, SiPostgresql } from 'react-icons/si';
+import { GiTestTubes } from 'react-icons/gi'; // para testes (JUnit, Mockito)
+
+
 // 1. Importar os ícones de tecnologia da react-icons
 import {
   FaReact,
@@ -10,7 +15,9 @@ import {
   FaGithub,
   FaSass,
   FaFigma,
+  FaDatabase, // para JDBC e bancos genéricos
 } from 'react-icons/fa';
+
 import {
   SiTypescript,
   SiJavascript,
@@ -44,6 +51,7 @@ import {
   SkillIcon,
   SkillTitle,
   SkillDescription,
+  StacksTitle,
 } from './styles';
 
 /**
@@ -102,7 +110,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
   /**
    * Tecnologias conhecidas com os novos ícones
    */
-  const technologies: Technology[] = [
+  const technologiesFront: Technology[] = [
     { name: 'React', icon: FaReact },
     { name: 'TypeScript', icon: SiTypescript },
     { name: 'JavaScript', icon: SiJavascript },
@@ -118,6 +126,19 @@ const About: React.FC<AboutProps> = ({ className }) => {
     { name: 'Cypress', icon: SiCypress },
     { name: 'Vercel', icon: SiVercel },
     { name: 'Figma', icon: FaFigma },
+  ];
+
+  const technologiesBack: Technology[] = [
+    { name: 'Java', icon: SiJavascript }, //mudar icone para Java
+  { name: 'JDK/JVM', icon: FaDatabase },
+  { name: 'Spring Boot', icon: SiSpringboot },
+  { name: 'APIs RESTful', icon: FaDatabase },
+  { name: 'MySQL', icon: SiMysql },
+  { name: 'JDBC', icon: FaDatabase },
+  { name: 'JUnit', icon: GiTestTubes },
+  { name: 'Mockito', icon: GiTestTubes },
+  { name: 'MongoDB', icon: SiMongodb },
+  { name: 'PostgreSQL', icon: SiPostgresql },
   ];
 
   /**
@@ -241,11 +262,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
           <SectionTitle variants={itemVariants}>Sobre Mim</SectionTitle>
 
           <Description variants={itemVariants}>
-            Minha paixão é transformar a curiosidade em soluções de software
-            eficientes e escaláveis. Sou um Desenvolvedor Full-Stack Junior,
-            com uma base sólida em arquiteturas e forte compromisso
-            com clean code, qualidade de código e otimização de performance em
-            toda a stack.
+Minha paixão é transformar a curiosidade em soluções de software eficientes e escaláveis. Sou um Desenvolvedor Full-Stack com foco em Front End com uma base sólida em arquiteturas e forte compromisso com clean code, qualidade de código e otimização e performance.
           </Description>
 
           {/* Estatísticas */}
@@ -278,9 +295,41 @@ const About: React.FC<AboutProps> = ({ className }) => {
             Tecnologias & Ferramentas
           </SkillsTitle>
 
+          <StacksTitle variants={itemVariants}>
+            Front End
+          </StacksTitle>
+
           {/* Grid de tecnologias */}
           <TechGrid variants={itemVariants}>
-            {technologies.map((tech, index) => {
+            {technologiesFront.map((tech, index) => {
+              const IconComponent = tech.icon;
+              return (
+                <TechItem
+                  key={tech.name}
+                  variants={techVariants}
+                  custom={index}
+                  whileHover={{
+                    scale: 1.1,
+                    rotate: 5,
+                    transition: { type: 'spring', stiffness: 300, damping: 20 },
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <TechIcon>
+                    <IconComponent size={24} />
+                  </TechIcon>
+                  <TechName>{tech.name}</TechName>
+                </TechItem>
+              );
+            })}
+          </TechGrid>
+
+          <StacksTitle variants={itemVariants}>
+            Back End
+          </StacksTitle>
+
+          <TechGrid variants={itemVariants}>
+            {technologiesBack.map((tech, index) => {
               const IconComponent = tech.icon;
               return (
                 <TechItem

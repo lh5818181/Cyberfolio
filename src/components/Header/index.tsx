@@ -58,7 +58,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
    * Itens de navegação
    */
   const navItems: NavItem[] = [
-    { label: 'Inicio', href: '#inicio' },
+    { label: 'Inicio', href: '#hero' },
     { label: 'Sobre', href: '#about' },
     { label: 'Projetos', href: '#projects' },
     { label: 'Contato', href: '#contact' },

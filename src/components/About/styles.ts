@@ -162,6 +162,16 @@ export const SkillsTitle = styled(motion.h3)`
   }
 `;
 
+export const StacksTitle = styled(motion.h4)`
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--cosmic-white);
+
+  @media (max-width: 1024px) {
+    text-align: left;
+  }
+`;
+
 /**
  * Grid das tecnologias
  * - Layout responsivo
