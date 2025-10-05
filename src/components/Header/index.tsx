@@ -58,7 +58,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
    * Itens de navegação
    */
   const navItems: NavItem[] = [
-    { label: 'Inicio', href: '#hero' },
+    { label: 'Inicio', href: '#home' },
     { label: 'Sobre', href: '#about' },
     { label: 'Projetos', href: '#projects' },
     { label: 'Contato', href: '#contact' },
@@ -83,7 +83,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
    */
   useEffect(() => {
     const handleScrollSpy = (): void => {
-      const sections = ['inicio', 'about', 'projects', 'contact'];
+      const sections = ['hero', 'about', 'projects', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
