@@ -153,7 +153,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
           {/* Descrição */}
           <Description variants={itemVariants}>
             Construindo experiências digitais de alta performance combinando
-            React, Next.js e TypeScript para performance de UI/UX. Atualmente
+            Stacks para performance de UI/UX. Atualmente
             estou melhorando minhas habilidades em back-end com Java.
           </Description>
 

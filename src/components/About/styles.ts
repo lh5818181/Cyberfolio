@@ -184,9 +184,10 @@ export const StacksTitle = styled(motion.h4)`
  * - Espaçamento uniforme
  */
 export const TechGrid = styled(motion.div)`
-  display: flex;
-  gap: 1rem;
-  width: 300px;
+display: flex;
+flex-wrap: wrap;
+gap: 1rem;
+margin: 20px;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -214,7 +215,6 @@ export const TabsContainer = styled(motion.div)`
   gap: 1.5rem;
   border-bottom: 2px solid var(--cosmic-dark-lilac);
   padding-bottom: 0.5rem;
-  margin-bottom: 1.5rem;
 `;
 
 /**
@@ -263,6 +263,8 @@ export const TabContentContainer = styled.div`
  * - Hover effects com transformações
  */
 export const TechItem = styled(motion.div)`
+  width: 100px;
+    height: 100px;
   aspect-ratio: 1;
   background: rgba(26, 10, 58, 0.6);
   border: 1px solid var(--cosmic-dark-lilac);

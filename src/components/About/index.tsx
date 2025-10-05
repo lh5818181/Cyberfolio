@@ -154,27 +154,27 @@ const About: React.FC<AboutProps> = ({ className }) => {
   const skills: Skill[] = [
     {
       icon: Code,
-      title: 'Desenvolvimento Front-End',
+      title: 'Desenvolvimento Front-End & UX',
       description:
-        'Criação de aplicações web interativas e de alta performance, desde a estruturação com HTML/CSS até a componentização com React e Next.js.',
+        'Domínio em React, Next.js e TypeScript para criar interfaces responsivas e acessíveis. Aplicação de animações fluidas com Framer Motion para uma experiência de usuário (UX) superior.',
     },
     {
       icon: Palette,
-      title: 'UI/UX Design',
+      title: 'Desenvolvimento Back-End & Arquitetura',
       description:
-        'Foco em interfaces modernas e intuitivas, aplicando princípios de design responsivo e acessibilidade para garantir a melhor experiência do usuário.',
+        'Sólida base em Java, POO e Spring Boot para a criação de APIs RESTful seguras. Conhecimento em persistência de dados (MySQL, MongoDB) e princípios de arquitetura de Microsserviços.',
     },
     {
       icon: Zap,
-      title: 'Otimização de Performance',
+      title: 'Qualidade de Código e Testes',
       description:
-        'Implementação de técnicas como renderização otimizada e boas práticas de codificação para garantir aplicações rápidas e eficientes.',
+        'Compromisso com Clean Code, Linting e Formatação. Experiência em testes de unidade e integração no Frontend (Jest/RTL) e uso de frameworks como JUnit e Mockito no Backend.',
     },
     {
       icon: Globe,
-      title: 'Qualidade de Código e Testes',
+      title: 'DevOps, Performance e Otimização',
       description:
-        'Utilização de testes unitários e de integração para garantir a robustez do software, mantendo um código limpo, legível e de fácil manutenção.',
+        'Aplicação de práticas de otimização (Lazy Loading) e introdução a DevOps/Cloud (Vercel, Docker, AWS). Foco em Continuous Deployment e em criar soluções web eficientes e escaláveis.',
     },
   ];
 
@@ -363,7 +363,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
                               whileTap={{ scale: 0.95 }}
                             >
                               <TechIcon>
-                                <IconComponent size={24} />
+                                <IconComponent size={20} />
                               </TechIcon>
                               <TechName>{tech.name}</TechName>
                             </TechItem>
