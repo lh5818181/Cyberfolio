@@ -1,10 +1,9 @@
-import React from 'react';
-import { type Variants } from 'framer-motion';
+import React, { useState } from 'react';
+import { AnimatePresence, type Variants } from 'framer-motion';
 import { Code, Palette, Zap, Globe } from 'lucide-react';
 
 import { SiSpringboot, SiMysql, SiMongodb, SiPostgresql } from 'react-icons/si';
 import { GiTestTubes } from 'react-icons/gi'; // para testes (JUnit, Mockito)
-
 
 // 1. Importar os ícones de tecnologia da react-icons
 import {
@@ -51,8 +50,10 @@ import {
   SkillIcon,
   SkillTitle,
   SkillDescription,
-  StacksTitle,
   TechContainer,
+  TabContentContainer,
+  TabsContainer,
+  TabButton,
 } from './styles';
 
 /**
@@ -98,6 +99,11 @@ interface AboutProps {
  * - Animações de entrada escalonadas
  */
 const About: React.FC<AboutProps> = ({ className }) => {
+  // Novo estado para controlar a aba ativa
+  const [activeStack, setActiveStack] = useState<'frontend' | 'backend'>(
+    'frontend'
+  );
+
   /**
    * Estatísticas do desenvolvedor
    */
@@ -131,15 +137,15 @@ const About: React.FC<AboutProps> = ({ className }) => {
 
   const technologiesBack: Technology[] = [
     { name: 'Java', icon: SiJavascript }, //mudar icone para Java
-  { name: 'JDK/JVM', icon: FaDatabase },
-  { name: 'Spring Boot', icon: SiSpringboot },
-  { name: 'APIs RESTful', icon: FaDatabase },
-  { name: 'MySQL', icon: SiMysql },
-  { name: 'JDBC', icon: FaDatabase },
-  { name: 'JUnit', icon: GiTestTubes },
-  { name: 'Mockito', icon: GiTestTubes },
-  { name: 'MongoDB', icon: SiMongodb },
-  { name: 'PostgreSQL', icon: SiPostgresql },
+    { name: 'JDK/JVM', icon: FaDatabase },
+    { name: 'Spring Boot', icon: SiSpringboot },
+    { name: 'APIs RESTful', icon: FaDatabase },
+    { name: 'MySQL', icon: SiMysql },
+    { name: 'JDBC', icon: FaDatabase },
+    { name: 'JUnit', icon: GiTestTubes },
+    { name: 'Mockito', icon: GiTestTubes },
+    { name: 'MongoDB', icon: SiMongodb },
+    { name: 'PostgreSQL', icon: SiPostgresql },
   ];
 
   /**
@@ -250,6 +256,13 @@ const About: React.FC<AboutProps> = ({ className }) => {
     }),
   };
 
+  // Nova Definição das Stacks para o sistema de abas
+  const STACKS = [
+    { id: 'frontend', name: 'Front End', data: technologiesFront },
+    { id: 'backend', name: 'Back End', data: technologiesBack },
+    // Adicione outras stacks se necessário (ex: 'devops')
+  ];
+
   return (
     <AboutContainer id="about" className={className}>
       <AboutContent>
@@ -261,29 +274,33 @@ const About: React.FC<AboutProps> = ({ className }) => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <SectionTitle variants={itemVariants}>Sobre Mim</SectionTitle>
-        <>
-          <Description variants={itemVariants}>
-Minha paixão é transformar a curiosidade em soluções de software eficientes e escaláveis. Sou um Desenvolvedor Full-Stack com foco em Front End com uma base sólida em arquiteturas e forte compromisso com clean code, qualidade de código e otimização e performance.
-          </Description>
+          <>
+            <Description variants={itemVariants}>
+              Minha paixão é transformar a curiosidade em soluções de software
+              eficientes e escaláveis. Sou um Desenvolvedor Full-Stack com foco
+              em Front End com uma base sólida em arquiteturas e forte
+              compromisso com clean code, qualidade de código e otimização e
+              performance.
+            </Description>
 
-          {/* Estatísticas */}
-          <StatsContainer variants={itemVariants}>
-            {stats.map((stat, index) => (
-              <StatItem
-                key={stat.label}
-                variants={statVariants}
-                custom={index}
-                whileHover={{
-                  scale: 1.05,
-                  transition: { type: 'spring', stiffness: 300, damping: 20 },
-                }}
-              >
-                <StatNumber>{stat.number}</StatNumber>
-                <StatLabel>{stat.label}</StatLabel>
-              </StatItem>
-            ))}
-          </StatsContainer>
-        </>
+            {/* Estatísticas */}
+            <StatsContainer variants={itemVariants}>
+              {stats.map((stat, index) => (
+                <StatItem
+                  key={stat.label}
+                  variants={statVariants}
+                  custom={index}
+                  whileHover={{
+                    scale: 1.05,
+                    transition: { type: 'spring', stiffness: 300, damping: 20 },
+                  }}
+                >
+                  <StatNumber>{stat.number}</StatNumber>
+                  <StatLabel>{stat.label}</StatLabel>
+                </StatItem>
+              ))}
+            </StatsContainer>
+          </>
         </TextContent>
 
         {/* Habilidades e tecnologias */}
@@ -298,62 +315,65 @@ Minha paixão é transformar a curiosidade em soluções de software eficientes 
           </SkillsTitle>
 
           <TechContainer variants={itemVariants}>
-          <StacksTitle variants={itemVariants}>
-            Front End
-          </StacksTitle>
-
-          {/* Grid de tecnologias */}
-          <TechGrid variants={itemVariants}>
-            {technologiesFront.map((tech, index) => {
-              const IconComponent = tech.icon;
-              return (
-                <TechItem
-                  key={tech.name}
-                  variants={techVariants}
-                  custom={index}
-                  whileHover={{
-                    scale: 1.1,
-                    rotate: 5,
-                    transition: { type: 'spring', stiffness: 300, damping: 20 },
-                  }}
-                  whileTap={{ scale: 0.95 }}
+            {/* Botões das Abas */}
+            <TabsContainer>
+              {STACKS.map((stack) => (
+                <TabButton
+                  key={stack.id}
+                  $isActive={activeStack === stack.id}
+                  onClick={() =>
+                    setActiveStack(stack.id as 'frontend' | 'backend')
+                  }
                 >
-                  <TechIcon>
-                    <IconComponent size={24} />
-                  </TechIcon>
-                  <TechName>{tech.name}</TechName>
-                </TechItem>
-              );
-            })}
-          </TechGrid>
+                  {stack.name}
+                </TabButton>
+              ))}
+            </TabsContainer>
 
-          <StacksTitle variants={itemVariants}>
-            Back End
-          </StacksTitle>
-
-          <TechGrid variants={itemVariants}>
-            {technologiesBack.map((tech, index) => {
-              const IconComponent = tech.icon;
-              return (
-                <TechItem
-                  key={tech.name}
-                  variants={techVariants}
-                  custom={index}
-                  whileHover={{
-                    scale: 1.1,
-                    rotate: 5,
-                    transition: { type: 'spring', stiffness: 300, damping: 20 },
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <TechIcon>
-                    <IconComponent size={24} />
-                  </TechIcon>
-                  <TechName>{tech.name}</TechName>
-                </TechItem>
-              );
-            })}
-          </TechGrid>
+            {/* Conteúdo das Abas (Animado) */}
+            <TabContentContainer>
+              <AnimatePresence mode="wait">
+                {STACKS.map(
+                  (stack) =>
+                    activeStack === stack.id && (
+                      <TechGrid
+                        key={stack.id}
+                        // Animações de entrada e saída
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="hidden"
+                      >
+                        {stack.data.map((tech, index) => {
+                          const IconComponent = tech.icon;
+                          return (
+                            <TechItem
+                              key={tech.name}
+                              variants={techVariants}
+                              custom={index}
+                              whileHover={{
+                                scale: 1.1,
+                                rotate: 5,
+                                transition: {
+                                  type: 'spring',
+                                  stiffness: 300,
+                                  damping: 20,
+                                },
+                              }}
+                              whileTap={{ scale: 0.95 }}
+                            >
+                              <TechIcon>
+                                <IconComponent size={24} />
+                              </TechIcon>
+                              <TechName>{tech.name}</TechName>
+                            </TechItem>
+                          );
+                        })}
+                      </TechGrid>
+                    )
+                )}
+              </AnimatePresence>
+            </TabContentContainer>
           </TechContainer>
 
           <SkillsTitle variants={itemVariants}>

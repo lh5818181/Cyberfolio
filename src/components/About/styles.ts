@@ -159,6 +159,7 @@ export const SkillsTitle = styled(motion.h3)`
   color: var(--cosmic-light-gray);
   margin-bottom: 1rem;
   margin-top: 28px;
+  text-align: center;
 
   @media (max-width: 1024px) {
     text-align: left;
@@ -169,8 +170,10 @@ export const StacksTitle = styled(motion.h4)`
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--cosmic-white);
+  text-align: center;
+  margin-bottom: 1rem;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     text-align: left;
   }
 `;
@@ -181,16 +184,76 @@ export const StacksTitle = styled(motion.h4)`
  * - Espaçamento uniforme
  */
 export const TechGrid = styled(motion.div)`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  display: flex;
   gap: 1rem;
-  margin-bottom: 2rem;
+  width: 300px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
 `;
 
-export const TechContainer = styled(motion.div)` // Container para cada categoria de tecnologias - modificar layout
+// --- MODIFICAÇÃO no TechContainer ---
+/**
+ * Container para a seção de Stacks
+ * - Remove o layout de grid, agora é um container flex vertical para abrigar as abas.
+ */
+export const TechContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+`;
+
+/**
+ * Container para os botões da aba (Front End / Back End)
+ */
+export const TabsContainer = styled(motion.div)`
+  display: flex;
   gap: 1.5rem;
+  border-bottom: 2px solid var(--cosmic-dark-lilac);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+`;
+
+/**
+ * Botão individual da aba
+ * - Destaca a aba ativa com a cor neon (cosmic-cyan-neon)
+ */
+interface TabButtonProps {
+  $isActive: boolean; // Usamos '$' para evitar conflito com props HTML
+}
+
+export const TabButton = styled(motion.button)<TabButtonProps>`
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  color: ${(props) =>
+    props.$isActive ? 'var(--cosmic-cyan-neon)' : 'var(--cosmic-medium-gray)'};
+  border-bottom: 3px solid
+    ${(props) => (props.$isActive ? 'var(--cosmic-cyan-neon)' : 'transparent')};
+  text-shadow: ${(props) =>
+    props.$isActive ? '0 0 10px rgba(0, 255, 255, 0.3)' : 'none'};
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: var(--cosmic-white);
+  }
+`;
+
+/**
+ * Container para o conteúdo da aba.
+ * Usamos 'position: relative' para permitir que a animação funcione corretamente.
+ */
+export const TabContentContainer = styled.div`
+  position: relative;
+  min-height: 250px; /* Ajuda a evitar que a seção salte de altura ao trocar a aba */
+  overflow: hidden;
+  width: 100%;
 `;
 
 /**
@@ -208,8 +271,8 @@ export const TechItem = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 10px 45px;
+  gap: 0.25rem;
+  padding: 10px 20px;
   backdrop-filter: blur(10px);
   transition: all var(--cosmic-transition-medium);
   cursor: pointer;
