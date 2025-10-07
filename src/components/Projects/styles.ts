@@ -166,8 +166,22 @@ export const ProjectCard = styled(motion.div)`
 export const ProjectImage = styled.div<{ $bgColor?: string }>`
   width: 100%;
   height: 200px;
+
+  /*
+    1. MOVE O ESTILO DE FUNDO PARA O COMPONENTE PRINCIPAL
+    Isso permite que ele sirva tanto como cor (linear-gradient) quanto como imagem (url).
+  */
   background: ${(props) =>
     props.$bgColor || 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'};
+
+  /*
+    2. ADICIONA AS PROPRIEDADES DE CONTROLE DE IMAGEM
+    Isso garante que a imagem não estoure e seja centralizada.
+  */
+  background-size: cover; /* Ajusta o tamanho da imagem para cobrir o container */
+  background-repeat: no-repeat; /* Impede a repetição da imagem */
+  background-position: center; /* Centraliza a imagem no container */
+
   display: flex;
   align-items: center;
   justify-content: center;

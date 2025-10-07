@@ -99,7 +99,7 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
       category: 'templates',
       githubUrl: 'https://github.com/devhenriquejs/templateLP',
       liveUrl: 'https://template-lp-two.vercel.app/',
-      imageColor: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      imageColor: 'url(/assets/images/template.png)',
     },
     {
       id: '2',
@@ -120,7 +120,7 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
       category: 'react',
       githubUrl: 'https://github.com/devhenriquejs/ContactListReact.git',
       liveUrl: 'https://contact-list-react-ten.vercel.app/',
-      imageColor: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+      imageColor: 'url(/assets/images/Contact.png)',
     },
     {
       id: '3',
@@ -140,7 +140,7 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
       category: 'web',
       githubUrl: 'https://github.com/lh5818181/Apod-visualizer-project',
       liveUrl: 'https://apod-visualizer-project.vercel.app/',
-      imageColor: 'linear-gradient(135deg, #001f3f 0%, #1a004c 100%)',
+      imageColor: 'url(/assets/images/APOD.png)',
     },
     {
       id: '4',
@@ -160,7 +160,7 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
       category: 'design',
       githubUrl: 'https://github.com/lh5818181/Cyberfolio',
       liveUrl: 'https://cyberfolio-five.vercel.app/',
-      imageColor: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+      imageColor: 'url(/assets/images/Portfolio.png)',
     },
     // {
     //   id: '5',
