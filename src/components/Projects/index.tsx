@@ -24,7 +24,6 @@ import {
   ModalContent,
   ModalCloseButton,
   ModalInner,
-  getTechTagColor,
 } from './styles';
 
 /**
