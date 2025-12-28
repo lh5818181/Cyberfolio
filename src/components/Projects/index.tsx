@@ -24,6 +24,7 @@ import {
   ModalContent,
   ModalCloseButton,
   ModalInner,
+  getTechTagColor,
 } from './styles';
 
 /**
@@ -161,6 +162,27 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
       githubUrl: 'https://github.com/lh5818181/Cyberfolio',
       liveUrl: 'https://cyberfolio-five.vercel.app/',
       imageColor: 'url(/assets/images/Portfolio.png)',
+    },
+    {
+      id: '5',
+      title: 'GitHub Design System',
+      description:
+        'Sistema de design modular e acessível inspirado no GitHub, com documentação interativa e testes automatizados.',
+      fullDescription:
+        'Uma biblioteca de componentes de alta fidelidade desenvolvida com foco em modularidade e escalabilidade. O projeto aplica a metodologia Atomic Design (separando Átomos, Moléculas e Organismos) e conta com documentação viva via Storybook 8. Possui 100% de cobertura de testes unitários com Jest e pipeline de CI/CD configurado no GitHub Actions para deploy automático. Desenvolvido como desafio prático avançado de UX/UI.',
+      technologies: [
+        'React',
+        'TypeScript',
+        'Storybook',
+        'Jest',
+        'Sass',
+        'Atomic Design',
+        'CI/CD',
+      ],
+      category: 'design', 
+      githubUrl: 'https://github.com/lh5818181/github-design-system',
+      liveUrl: 'https://lh5818181.github.io/github-design-system/',
+      imageColor: 'url(/assets/images/github-ds.png)', 
     },
     // {
     //   id: '5',
