@@ -72,6 +72,7 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
     { id: 'todos', label: 'Todos' },
     { id: 'react', label: 'React' },
     { id: 'web', label: 'Web' },
+    { id: 'Back-End', label: 'Back-End' },
     // { id: 'mobile', label: 'Mobile' },
     { id: 'design', label: 'Design' },
     { id: 'templates', label: 'Templates' },
@@ -178,24 +179,33 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
         'Atomic Design',
         'CI/CD',
       ],
-      category: 'design', 
+      category: 'design',
       githubUrl: 'https://github.com/lh5818181/github-design-system',
       liveUrl: 'https://lh5818181.github.io/github-design-system/',
-      imageColor: 'url(/assets/images/github-ds.png)', 
+      imageColor: 'url(/assets/images/github-ds.png)',
     },
-    // {
-    //   id: '5',
-    //   title: 'Social Media Dashboard',
-    //   description:
-    //     'Dashboard para análise de redes sociais com gráficos interativos e relatórios.',
-    //   fullDescription:
-    //     'Dashboard completo para análise de métricas de redes sociais, com gráficos interativos, relatórios automatizados, integração com APIs do Instagram, Facebook e Twitter, e sistema de agendamento de posts.',
-    //   technologies: ['React', 'Chart.js', 'Express', 'Redis'],
-    //   category: 'fullstack',
-    //   githubUrl: 'https://github.com',
-    //   liveUrl: 'https://demo.com',
-    //   imageColor: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
-    // },
+    {
+      id: '6',
+      title: 'BeTalent - API de Pagamentos Multi-Gateway',
+      description:
+        'API RESTful para gerenciamento de pagamentos com fallback automático entre gateways, autenticação via tokens e 50 testes funcionais passando.',
+      fullDescription:
+        'Sistema backend completo de pagamentos multi-gateway desenvolvido com AdonisJS e TypeScript. A API processa compras calculando o valor via backend a partir de múltiplos produtos e quantidades, tentando o pagamento no gateway de maior prioridade e fazendo fallback automático para o próximo em caso de falha. Conta com autenticação via Access Tokens, CRUD de produtos, histórico completo de transações por cliente, gerenciamento de gateways com ativação/desativação e reordenação de prioridade. O projeto foi desenvolvido com TDD, possui 50 testes funcionais cobrindo todos os endpoints, e está containerizado com Docker Compose incluindo MySQL e mock dos gateways.',
+      technologies: [
+        'AdonisJS',
+        'TypeScript',
+        'MySQL',
+        'Docker',
+        'TDD',
+        'REST API',
+        'JWT',
+      ],
+      category: 'Back-End',
+      githubUrl: 'https://github.com/lh5818181/betalent-backend-challenge',
+      liveUrl: '#',
+      imageColor:
+        'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+    },
     // {
     //   id: '6',
     //   title: 'Blog Platform',
