@@ -210,6 +210,51 @@ export const ProjectImage = styled.div<{ $bgColor?: string }>`
 `;
 
 /**
+ * Wrapper para tornar o vídeo responsivo (16:9)
+ */
+export const ProjectVideoWrapper = styled.div`
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--cosmic-dark-lilac);
+  background: #000;
+  line-height: 0;
+
+  video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+`;
+
+/**
+ * Grid para galeria de imagens
+ */
+export const ImageGalleryGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+`;
+
+/**
+ * Estilização das imagens da galeria
+ */
+export const GalleryImage = styled.img`
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--cosmic-dark-lilac);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    border-color: var(--cosmic-cyan-neon);
+  }
+`;
+
+/**
  * Ícone placeholder para imagem
  * - Tamanho grande
  * - Cor suave

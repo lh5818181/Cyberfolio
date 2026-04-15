@@ -126,7 +126,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
           {/* Badge de status */}
           <StatusBadge variants={itemVariants}>
             <StatusDot />
-            Portfolio em Desenvolvimento
+            Disponível para Oportunidades
           </StatusBadge>
 
           {/* Título principal com efeito de digitação */}
@@ -146,15 +146,17 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
 
           {/* Subtítulo */}
           <Subtitle variants={itemVariants}>
-            Desenvolvedor Full-Stack (React/Next.js) | Foco em Sistemas
-            Escaláveis e Backend com Java
+            Desenvolvedor Full-Stack | Graduando em Análise e Desenvolvimento de
+            Sistemas | Foco em C++ e Sistemas de Alta Performance
           </Subtitle>
 
           {/* Descrição */}
           <Description variants={itemVariants}>
-            Construindo experiências digitais de alta performance combinando
-            Stacks para performance de UI/UX. Atualmente estou melhorando minhas
-            habilidades em back-end com Java.
+            Especialista na criação de interfaces modernas, acessíveis e
+            escaláveis com React e TypeScript. Atualmente, direciono minha
+            evolução técnica para o desenvolvimento de sistemas robustos com
+            C++, combinando agilidade no front-end com solidez na lógica de
+            baixo nível.
           </Description>
 
           {/* Botões de ação */}

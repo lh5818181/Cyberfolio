@@ -24,6 +24,9 @@ import {
   ModalContent,
   ModalCloseButton,
   ModalInner,
+  GalleryImage,
+  ImageGalleryGrid,
+  ProjectVideoWrapper,
 } from './styles';
 
 /**
@@ -39,6 +42,9 @@ interface Project {
   githubUrl: string;
   liveUrl: string;
   imageColor: string;
+  gallery?: string[]; // Array para novas imagens
+  videoUrl?: string; // Link para o vídeo
+  extraVideos?: { title: string; url: string }[]; // Novo campo
 }
 
 /**
@@ -206,6 +212,43 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
       imageColor:
         'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
     },
+    {
+      id: 'lacrei-saude',
+      title: 'Lacrei Saúde - Front-End & Design System',
+      description:
+        'Contribuição voluntária de 144 horas focada na evolução do Design System Marsha e acessibilidade (WCAG).',
+      fullDescription:
+        'Durante o voluntariado na Lacrei Saúde, atuei no desenvolvimento front-end focado em acessibilidade e escalabilidade. Refatorei componentes críticos do Design System Marsha, como o InputText, e desenvolvi do zero o InputTime seguindo rigorosamente o Figma. Realizei uma auditoria completa de tokens de tipografia para eliminar débitos técnicos e estabilizei a infraestrutura de testes unitários com Jest e Testing Library, garantindo a qualidade das entregas.',
+      technologies: [
+        'React',
+        'TypeScript',
+        'Styled Components',
+        'Jest',
+        'Acessibilidade (WCAG)',
+        'Design System',
+      ],
+      category: 'web',
+      githubUrl: '#',
+      liveUrl: 'https://lacreisaude.com.br/',
+      imageColor: 'url(/assets/images/CertificadoLacrei.webp)',
+      videoUrl:
+        'https://res.cloudinary.com/dhononans/video/upload/v1776281221/layout_do_formulario_fwqo4i.mp4',
+      extraVideos: [
+        {
+          title: 'Upload de Imagem de Perfil',
+          url: 'https://res.cloudinary.com/dhononans/video/upload/v1776280833/imagem_do_perfil_wrsybh.mp4',
+        },
+        {
+          title: 'Tratamento de Erros (400-409)',
+          url: 'https://res.cloudinary.com/dhononans/video/upload/v1776281195/mensagem_do_erro_-_400-409_jfu8ht.mp4',
+        },
+      ],
+      gallery: [
+        '/assets/images/auditoriaTokens.webp',
+        '/assets/images/inputTime.webp',
+        '/assets/images/CertificadoLacrei.webp',
+      ],
+    },
     // {
     //   id: '6',
     //   title: 'Blog Platform',
@@ -268,6 +311,9 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
       'Styled Components': 'rgba(219, 112, 147, 0.1)',
       'Framer Motion': 'rgba(0, 85, 255, 0.1)',
       Tailwind: 'rgba(6, 182, 212, 0.1)',
+      'Acessibilidade (WCAG)': 'rgba(0, 255, 127, 0.1)',
+      'Design System': 'rgba(255, 0, 255, 0.1)',
+      Jest: 'rgba(153, 67, 79, 0.1)',
     };
     return colors[tech] || 'rgba(0, 255, 255, 0.1)';
   };
@@ -463,14 +509,37 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
               </ModalCloseButton>
 
               <ModalInner>
-                <ProjectImage $bgColor={selectedProject.imageColor}>
-                  <ProjectImageIcon>
-                    <Code size={64} />
-                  </ProjectImageIcon>
-                </ProjectImage>
+                {/* Vídeo Principal ou Imagem de Capa */}
+                {selectedProject.videoUrl ? (
+                  <ProjectVideoWrapper>
+                    <video
+                      controls
+                      poster={
+                        selectedProject.id === 'lacrei-saude'
+                          ? ''
+                          : selectedProject.imageColor.replace(
+                              /url\(|'|"\)/g,
+                              ''
+                            )
+                      }
+                    >
+                      <source src={selectedProject.videoUrl} type="video/mp4" />
+                    </video>
+                  </ProjectVideoWrapper>
+                ) : (
+                  <ProjectImage $bgColor={selectedProject.imageColor}>
+                    <ProjectImageIcon>
+                      <Code size={64} />
+                    </ProjectImageIcon>
+                  </ProjectImage>
+                )}
 
                 <ProjectTitle
-                  style={{ fontSize: '1.5rem', marginBottom: '1rem' }}
+                  style={{
+                    fontSize: '1.5rem',
+                    marginTop: '1.5rem',
+                    marginBottom: '1rem',
+                  }}
                 >
                   {selectedProject.title}
                 </ProjectTitle>
@@ -479,12 +548,82 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
                   style={{
                     fontSize: '1rem',
                     WebkitLineClamp: 'unset',
-                    overflow: 'visible',
                     display: 'block',
+                    marginBottom: '1.5rem',
                   }}
                 >
                   {selectedProject.fullDescription}
                 </ProjectDescription>
+
+                {/* Vídeos Extras (Específico para Lacrei ou outros com múltiplos vídeos) */}
+                {selectedProject.extraVideos && (
+                  <div style={{ marginBottom: '2rem' }}>
+                    <h4
+                      style={{
+                        color: '#00ffff',
+                        marginBottom: '1rem',
+                        fontSize: '1rem',
+                      }}
+                    >
+                      Demonstrações de Funcionalidades:
+                    </h4>
+                    <div
+                      style={{
+                        display: 'grid',
+                        gridTemplateColumns: '1fr 1fr',
+                        gap: '1rem',
+                      }}
+                    >
+                      {selectedProject.extraVideos.map((video, idx) => (
+                        <div key={idx}>
+                          <p
+                            style={{
+                              fontSize: '0.8rem',
+                              color: '#ccc',
+                              marginBottom: '0.5rem',
+                            }}
+                          >
+                            {video.title}
+                          </p>
+                          <ProjectVideoWrapper>
+                            <video
+                              src={video.url}
+                              controls
+                              muted
+                              style={{ borderRadius: '8px' }}
+                            />
+                          </ProjectVideoWrapper>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Galeria de Imagens (Auditoria e Certificado) */}
+                {selectedProject.gallery &&
+                  selectedProject.gallery.length > 0 && (
+                    <div style={{ marginBottom: '2rem' }}>
+                      <h4
+                        style={{
+                          color: '#00ffff',
+                          marginBottom: '1rem',
+                          fontSize: '1rem',
+                        }}
+                      >
+                        Galeria e Certificações:
+                      </h4>
+                      <ImageGalleryGrid>
+                        {selectedProject.gallery.map((img, idx) => (
+                          <GalleryImage
+                            key={idx}
+                            src={img}
+                            alt={`Evidência ${idx + 1}`}
+                            loading="lazy"
+                          />
+                        ))}
+                      </ImageGalleryGrid>
+                    </div>
+                  )}
 
                 <TechTags>
                   {selectedProject.technologies.map((tech) => (
@@ -502,8 +641,6 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     $type="github"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
                     style={{ width: '50px', height: '50px' }}
                   >
                     <Github size={24} />
@@ -513,8 +650,6 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     $type="live"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
                     style={{ width: '50px', height: '50px' }}
                   >
                     <ExternalLink size={24} />

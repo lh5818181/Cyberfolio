@@ -2,7 +2,13 @@ import React, { useState } from 'react';
 import { AnimatePresence, type Variants } from 'framer-motion';
 import { Code, Palette, Zap, Globe } from 'lucide-react';
 
-import { SiSpringboot, SiMysql, SiMongodb, SiPostgresql } from 'react-icons/si';
+import {
+  SiSpringboot,
+  SiMysql,
+  SiMongodb,
+  SiPostgresql,
+  SiCplusplus,
+} from 'react-icons/si';
 import { GiTestTubes } from 'react-icons/gi'; // para testes (JUnit, Mockito)
 
 // 1. Importar os ícones de tecnologia da react-icons
@@ -136,6 +142,9 @@ const About: React.FC<AboutProps> = ({ className }) => {
   ];
 
   const technologiesBack: Technology[] = [
+    { name: 'C++', icon: SiCplusplus },
+    { name: 'Lógica de Programação', icon: Code },
+    { name: 'Estrutura de Dados', icon: FaDatabase },
     { name: 'Java', icon: SiJavascript }, //mudar icone para Java
     { name: 'JDK/JVM', icon: FaDatabase },
     { name: 'Spring Boot', icon: SiSpringboot },
@@ -276,11 +285,13 @@ const About: React.FC<AboutProps> = ({ className }) => {
           <SectionTitle variants={itemVariants}>Sobre Mim</SectionTitle>
           <>
             <Description variants={itemVariants}>
-              Minha paixão é transformar a curiosidade em soluções de software
-              eficientes e escaláveis. Sou um Desenvolvedor Full-Stack com foco
-              em Front End com uma base sólida em arquiteturas e forte
-              compromisso com clean code, qualidade de código e otimização e
-              performance.
+              Sou Desenvolvedor Full Stack formado pela EBAC e graduando em
+              Análise e Desenvolvimento de Sistemas pela Estácio. Minha
+              trajetória inclui experiência real em desenvolvimento front-end na
+              Lacrei Saúde e em projetos pessoais onde foquei em acessibilidade
+              (WCAG) e arquitetura de componentes com Atomic Design. Atualmente,
+              estou me aprofundando em C++, buscando entender a base da
+              computação e construir sistemas de alta eficiência e performance.
             </Description>
 
             {/* Estatísticas */}
