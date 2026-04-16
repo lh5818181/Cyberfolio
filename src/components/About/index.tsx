@@ -163,27 +163,27 @@ const About: React.FC<AboutProps> = ({ className }) => {
   const skills: Skill[] = [
     {
       icon: Code,
-      title: 'Desenvolvimento Front-End & UX',
+      title: 'Front-End & Design Systems',
       description:
-        'Domínio em React, Next.js e TypeScript para criar interfaces responsivas e acessíveis. Aplicação de animações fluidas com Framer Motion para uma experiência de usuário (UX) superior.',
+        'Especialista em React e TypeScript, com foco em arquitetura modular (Atomic Design) e acessibilidade (WCAG). Experiência real na evolução de Design Systems e criação de interfaces responsivas com foco em UX e performance.',
     },
     {
       icon: Palette,
-      title: 'Desenvolvimento Back-End & Arquitetura',
+      title: 'Back-End & Integrações',
       description:
-        'Sólida base em Java, POO e Spring Boot para a criação de APIs RESTful seguras. Conhecimento em persistência de dados (MySQL, MongoDB) e princípios de arquitetura de Microsserviços.',
+        'Desenvolvimento de APIs RESTful utilizando Java e Spring Boot. Experiência na integração segura de dados no Front-End, consumo de serviços complexos e manipulação de bancos de dados SQL e NoSQL.',
     },
     {
       icon: Zap,
-      title: 'Qualidade de Código e Testes',
+      title: 'Qualidade & Estabilização',
       description:
-        'Compromisso com Clean Code, Linting e Formatação. Experiência em testes de unidade e integração no Frontend (Jest/RTL) e uso de frameworks como JUnit e Mockito no Backend.',
+        'Foco em Clean Code e redução de débito técnico. Atuação em auditoria de Design Tokens e implementação de testes automatizados (Jest, Testing Library, JUnit e Mockito) para garantir estabilidade em ambientes de produção.',
     },
     {
       icon: Globe,
-      title: 'DevOps, Performance e Otimização',
+      title: 'DevOps & Performance',
       description:
-        'Aplicação de práticas de otimização (Lazy Loading) e introdução a DevOps/Cloud (Vercel, Docker, AWS). Foco em Continuous Deployment e em criar soluções web eficientes e escaláveis.',
+        'Automação de fluxos com CI/CD (GitHub Actions) e otimização de entrega de mídias via Cloudinary CDN. Gestão de deploys em ambientes de Staging/Produção e familiaridade com Docker e infraestrutura escalável.',
     },
   ];
 
