@@ -1,8 +1,8 @@
-# 🌌 Portfólio Luís Henrique - Desenvolvedor Full-Stack
+# 🌌 Cyberfolio — Portfólio Profissional de Luís Henrique 
 
 Um portfólio web moderno e responsivo desenvolvido com React, TypeScript, Vite e Styled-components, apresentando um design cósmico suave com animações fluidas e interações envolventes.
 
-## ✨ Características
+## 🚀 Funcionalidades
 
 ### 🎨 Design & UX
 - **Tema Cósmico Suave**: Gradientes profundos com efeitos de estrelas cintilantes
@@ -27,6 +27,8 @@ Um portfólio web moderno e responsivo desenvolvido com React, TypeScript, Vite 
 - **Framer Motion** - Biblioteca de animações
 - **Lucide React** - Ícones modernos e consistentes
 - **ESLint + Prettier** - Qualidade e formatação de código
+
+
 
 ## 📁 Estrutura do Projeto
 
@@ -53,8 +55,8 @@ src/
 │       └── styles.ts
 ├── App.tsx              # Componente principal
 ├── App.css              # Estilos globais e variáveis CSS
-├── main.tsx             # Ponto de entrada
-└── index.css            # Reset CSS
+└── main.tsx             # Ponto de entrada
+
 ```
 
 ## 🛠️ Instalação e Uso
@@ -69,7 +71,7 @@ src/
 git clone <url-do-repositorio>
 
 # Entre na pasta do projeto
-cd luis-portfolio-novo
+cd Cyberfolio
 
 # Instale as dependências
 npm install --legacy-peer-deps
@@ -140,6 +142,7 @@ O design é totalmente responsivo com breakpoints otimizados:
 - **Otimização de Imagens**: Formatos modernos e compressão
 - **Code Splitting**: Bundle otimizado pelo Vite
 - **CSS-in-JS**: Estilos carregados apenas quando necessários
+- **Asset Hosting (Cloudinary)**: Mídias pesadas e vídeos de demonstração hospedados via CDN para garantir carregamento instantâneo e alta disponibilidade.
 
 ## 🔧 Personalização
 
@@ -193,9 +196,9 @@ Contribuições são bem-vindas! Sinta-se à vontade para:
 
 **Luís Henrique** - Desenvolvedor Full-Stack
 
-- 📧 Email: luis.henrique@email.com
-- 💼 LinkedIn: [linkedin.com/in/luis-henrique](https://linkedin.com)
-- 🐱 GitHub: [github.com/luis-henrique](https://github.com)
+- 📧 Email: lh5818181@gmail.com
+- 💼 LinkedIn: [https://www.linkedin.com/in/luis-henrique-fullstack/](https://linkedin.com)
+- 🐱 GitHub: [https://github.com/lh5818181](https://github.com)
 
 ---
 
