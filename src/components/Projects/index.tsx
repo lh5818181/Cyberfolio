@@ -249,6 +249,26 @@ const Projects: React.FC<ProjectsProps> = ({ className }) => {
         '/assets/images/CertificadoLacrei.webp',
       ],
     },
+    {
+      id: 'bio-link',
+      title: 'Bio Link Tech',
+      description:
+        'Link na bio estilo cyberpunk/gamer com animações, efeito typewriter, partículas e arquitetura Atomic Design.',
+      fullDescription:
+        'Projeto de link na bio desenvolvido com foco em identidade visual e organização de código. A interface tem tema cyberpunk com grid animado em canvas, partículas flutuantes, efeito de digitação e anéis rotativos no avatar. A arquitetura segue Atomic Design (atoms, molecules, organisms, pages), estilização com CSS Modules — substituindo Styled Components — e animações com Framer Motion. Todo o conteúdo é centralizado em um único arquivo de configuração, e novos componentes são gerados automaticamente via script CLI.',
+      technologies: [
+        'React',
+        'TypeScript',
+        'CSS Modules',
+        'Framer Motion',
+        'Vite',
+        'Atomic Design',
+      ],
+      category: 'design',
+      githubUrl: 'https://github.com/lh5818181/link-bio-tech',
+      liveUrl: 'https://link-bio-tech.vercel.app/', // ← atualize após o deploy
+      imageColor: 'url(/assets/images/link-bio.png)',
+    },
     // {
     //   id: '6',
     //   title: 'Blog Platform',
